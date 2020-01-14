@@ -17,6 +17,24 @@ Pod::Spec.new do |s|
     ss.dependency 'FMDB/standalone', '>= 2.3'
   end
   
+  # Use the FTS build of SQLite
+  s.subspec 'FTS' do |ss|
+    ss.source_files = 'Code'
+    ss.dependency 'FMDB/FTS', '>= 2.3'
+  end
+  
+  # Use the standalone-fts build of SQLite
+  s.subspec 'Standalone' do |ss|
+    ss.source_files = 'Code'
+    ss.dependency 'FMDB/standalone-fts', '>= 2.3'
+  end
+  
+  # Use the standalone build of SQLite
+  s.subspec 'SQLCipher' do |ss|
+    ss.source_files = 'Code'
+    ss.dependency 'FMDB/SQLCipher', '>= 2.3'
+  end
+  
   # Use the system build of sqlite
   s.subspec 'System' do |ss|
     ss.source_files = 'Code'
